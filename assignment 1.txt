@@ -1,0 +1,283 @@
+	Assignment no.1    
+	Student name  = bhalerao shweta
+	Roll no  = 96203
+
+
+
+mysql> create database spj;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use spj;
+Database changed
+
+mysql> create table s(s char(5) not null, sname char(20),status smallint, city char(15));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table p (p char(6) not null, pname char(20),color char(6), weight smallint, city char(15));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> create table j (j char(4) not null,jname char(10),city char(15));
+Query OK, 0 rows affected (0.03 sec)
+
+
+
+mysql> insert into s values('abc','megha',2,'kop');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into s values('s1','Smith',20,'London');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into s values('s2','Jones',10,'Paris');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into s values('s3','Blake',30,'Paris');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into s values('s4','Clark',20,'London');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into s values('s5','Adams',30,'Athens');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from s;
++-----+-------+--------+--------+
+| s   | sname | status | city   |
++-----+-------+--------+--------+
+| abc | megha |      2 | kop    |
+| s1  | Smith |     20 | London |
+| s2  | Jones |     10 | Paris  |
+| s3  | Blake |     30 | Paris  |
+| s4  | Clark |     20 | London |
+| s5  | Adams |     30 | Athens |
++-----+-------+--------+--------+
+6 rows in set (0.00 sec)
+
+mysql> insert into p values('p1','nut','Red',12,'London');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into p values('p2','Bolt','Green',17,'Paris');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into p values('p3','Screw','Blue',17,'Rome');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into p values('p4','Screw','Red',14,'London');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into p values('p5','Cam','Blue',12,'Paris');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into p values('p6','Cog','Red',19,'London');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from p;
++----+-------+-------+--------+--------+
+| p  | pname | color | weight | city   |
++----+-------+-------+--------+--------+
+| p1 | nut   | Red   |     12 | London |
+| p2 | Bolt  | Green |     17 | Paris  |
+| p3 | Screw | Blue  |     17 | Rome   |
+| p4 | Screw | Red   |     14 | London |
+| p5 | Cam   | Blue  |     12 | Paris  |
+| p6 | Cog   | Red   |     19 | London |
++----+-------+-------+--------+--------+
+6 rows in set (0.01 sec)
+
+
+
+mysql> insert into j values('j1','Sorter','Paris');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into j values('j2','Punch','Rom');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into j values('j3','Reader','Athens');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into j values('j4','Console','Athens');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into j values('j5','Collator','London');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into j values('j6','Terminal','Oslo');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into j values('j7','Tape','London');
+Query OK, 1 row affected (0.01 sec)
+
+
+
+mysql> select * from j;
++----+----------+--------+
+| j  | jname    | city   |
++----+----------+--------+
+| j1 | Sorter   | Paris  |
+| j2 | Punch    | Rom    |
+| j3 | Reader   | Athens |
+| j4 | Console  | Athens |
+| j5 | Collator | London |
+| j6 | Terminal | Oslo   |
+| j7 | Tape     | London |
++----+----------+--------+
+7 rows in set (0.01 sec)
+
+mysql> create table sp (s char(4) not null, p char(4) not null,j char(4) not null,QTY int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into sp values('s1','p1','j1',200);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into sp values('s1','p1','j4',700);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p3','j1',400);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p3','j2',200);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p3','j3',200);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p3','j4',500);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into sp values('s2','p3','j5',600);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p3','j6',400);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p3','j7',800);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s2','p5','j2',100);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s3','p3','j1',200);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s3','p4','j2',500);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into sp values('s4','p6','j3',300);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s4','p6','j7',300);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p2','j2',200);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p2','j4',100);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p5','j5',500);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into sp values('s5','p5','j7',100);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p6','j2',200);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into sp values('s5','p1','j4',100);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into sp values('s5','p3','j4',200);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p4','j4',800);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p5','j4',400);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sp values('s5','p6','j4',500);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from sp;
++----+----+----+------+
+| s  | p  | j  | QTY  |
++----+----+----+------+
+| s1 | p1 | j1 |  200 |
+| s1 | p1 | j4 |  700 |
+| s2 | p3 | j1 |  400 |
+| s2 | p3 | j2 |  200 |
+| s2 | p3 | j3 |  200 |
+| s2 | p3 | j4 |  500 |
+| s2 | p3 | j5 |  600 |
+| s2 | p3 | j6 |  400 |
+| s2 | p3 | j7 |  800 |
+| s2 | p5 | j2 |  100 |
+| s3 | p3 | j1 |  200 |
+| s3 | p4 | j2 |  500 |
+| s4 | p6 | j3 |  300 |
+| s4 | p6 | j7 |  300 |
+| s5 | p2 | j2 |  200 |
+| s5 | p2 | j4 |  100 |
+| s5 | p5 | j5 |  500 |
+| s5 | p5 | j7 |  100 |
+| s5 | p6 | j2 |  200 |
+| s5 | p1 | j4 |  100 |
+| s5 | p3 | j4 |  200 |
+| s5 | p4 | j4 |  800 |
+| s5 | p5 | j4 |  400 |
+| s5 | p6 | j4 |  500 |
++----+----+----+------+
+24 rows in set (0.00 sec)
+
+
+
+mysql> create database hr;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create database sales;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use hr;
+Database changed
+
+mysql> use sales;
+Database changed
+
+
+
+
+
+1. How many orders data is present in the database?
+-->   16 orders present.
+
+2. How many customers are present in the database?
+--> 15 customers.
+
+3. How many salespeople are present in the database?
+--> 5 salespeople.
+
+4. On which date order with highest amount is placed?
+--> amount is 5000, placed on 2026-02-15.
+
+5. For which order salesman got maximum commission?
+--> Order 102 by David 
+
+6. Which salesmen are handling more than two customers?
+John and David
+
+7. Which city has single customer?
+--> Oslo
+
+7. Which city has multiple salespeople?
+London
+Paris
+
+9. What is the name of customer and salesman of the maximum amount order?
+Customer: Smith
+Salesman: David
+
+10. Study relationship between the tables in sales database
+Relationships between tables:
+orders → customers  relationship=  Many-to-One
+orders → salesmen   relationship=  Many-to-One
+customers → salesmen  relationship=  Many-to-one
+
